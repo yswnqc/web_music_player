@@ -1,0 +1,58 @@
+<!-- codewithharsh_ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="MusicPlayer.css">
+    <!-- Don't forget to add Material Icons Cdn Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Mini Music Player</title>
+</head>
+<body>
+  
+ <div class="container">
+    <audio src="" id="music"></audio>
+    <div class="music-details">
+        <h4 class="artist-name">Neffex</h4>
+        <p class="music-name">Get Through</p>
+        <div class="progress-area">
+            <div class="progress-bar"></div>
+        </div>
+        <span class="current-time">0:00</span>
+        <span class="total-time">3:45</span>
+    </div>
+    <div class="music-img-box">
+        <div class="center-dot"></div>
+        <div class="music-img">
+            <img src="Images/image1.jpg" alt="">
+        </div>
+    </div>
+    <div class="btns-box">
+        <div class="btns">
+            <button>
+                <i class="material-icons fast-rewind">
+                    fast_rewind
+                </i>
+            </button>
+            <button class="play-pause-btn play">
+                <i class="material-icons">
+                    play_arrow
+                </i>
+            </button>
+            <button>
+                <i class="material-icons fast-forward">
+                    fast_forward
+                </i>
+            </button>
+        </div>
+    </div>
+ </div>
+
+<!-- Data file -->
+<script src="Data.js"></script>
+<!-- Script file -->
+<script src="MusicPlayer.js"></script>
+</body>
+</html>

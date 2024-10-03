@@ -1,0 +1,181 @@
+/* codewithharsh_ */
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family: "Poppins", sans-serif;
+}
+
+body{
+ background:#a8d6d3;
+}
+
+.container{
+ height:140px;
+ width:330px;
+ background:#c3e3e0;
+ box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ border-radius:10px;
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%, -50%);
+}
+
+.container .music-img-box{
+ height:120px;
+ width:120px;
+ background:#fff;
+ box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ border-radius:5px;
+ position:absolute;
+ top:-20px;
+ left:20px;
+ z-index:1;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+.container .music-img-box .music-img{
+ height:80px;
+ width:80px;
+ box-shadow:rgba(69, 166, 155, 0.15) 0px 5px 15px 0px;
+ border-radius:100%;
+}
+
+.container .music-img-box .music-img img{
+ height:100%;
+ width:100%;
+ border-radius:100%;
+}
+
+.container .music-img-box .music-img.img-rotate{
+ animation:rotate 3s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform:rotate(0deg);
+    }100%{
+        transform:rotate(360deg);
+    }
+}
+
+.container .music-img-box .center-dot{
+ height:15px;
+ width:15px;
+ background:#fff;
+ border-radius:100%;
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%, -50%);
+ z-index:1;
+}
+
+.container .music-details{
+ position:absolute;
+ right:0;
+ width:185px;
+ height:70px;
+ padding:5px;
+ padding-left:10px;
+}
+
+.container .music-details .artist-name{
+ font-size:10px;
+ color:#45a69b;
+ position:relative;
+ top:5px;
+}
+
+.container .music-details .music-name{
+ font-size:8px;
+ font-weight:300;
+ color:#45a69b;
+ white-space:nowrap;
+ margin-top:2px;
+ position:relative;
+ top:3px;
+}
+
+.container .music-details .progress-area{
+ height:4px;
+ width:160px;
+ background:#fff;
+ border-radius:5px;
+ margin-top:17px;
+ cursor:pointer;
+}
+
+.container .music-details .progress-area .progress-bar{
+ height:4px;
+ width:0%;
+ background:#45a69b;
+ border-radius:5px;
+}
+
+.container .music-details .current-time,
+.container .music-details .total-time{
+ font-size:8px;
+ color:#45a69b;
+ position:relative;
+ top:-5px;
+}
+
+.container .music-details .total-time{
+ left:123px;
+}
+
+.container .btns-box{
+ position:absolute;
+ bottom:0;
+ height:60px;
+ width:100%;
+ border-radius:10px;
+ background:#fff;
+}
+
+.container .btns-box .btns{
+ width:140px;
+ display:flex;
+ align-items:center;
+ position:absolute;
+ right:30px;
+ bottom:10px;
+}
+
+.container .btns-box .btns button{
+ all:unset;
+ margin-left:5px;
+ height:40px;
+ width:40px;
+ background:#b8d7d9;
+ border-radius:7px;
+ color:#fff;
+ cursor:pointer;
+ overflow:hidden;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+.container .btns-box .btns button:nth-child(1),
+.container .btns-box .btns button:nth-child(3){
+ background:none;
+ color:#45a69b;
+ cursor:pointer;
+}
+
+.container .btns-box .btns button:nth-child(1){
+ position:relative;
+ left:-10px;
+}
+
+.container .btns-box .btns button:nth-child(3){
+ position:relative;
+ left:10px;
+}
