@@ -52,6 +52,9 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  transform-origin: center;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused; /* 默认暂停状态 */
 }
 
 .music-detail {
@@ -82,7 +85,7 @@ img {
 
 .progress-bar {
   height: 5px;
-  width: 50%;
+  width: 0%;
   background-color: #45a69b;
   border-radius: 5px;
   cursor: pointer;
@@ -128,6 +131,20 @@ button {
 }
 
 .play-btn {
-    color: white;
-    background-color: #a8d6d3;
+  color: white;
+  background-color: #a8d6d3;
 }
+
+.img-rotate {
+  animation: rotate 3s linear infinite;
+  /* transform-origin: center; */
+}
+
+@keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
