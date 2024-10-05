@@ -4,6 +4,7 @@ const currTime = document.querySelector('.current-time');
 const ttlTime = document.querySelector('.total-time');
 const progressBar = document.querySelector('.progress-bar');
 const musicImg = document.querySelector('img');
+const progressArea = document.querySelector('.progress-area');
 
 playBtn.addEventListener('click', () => {
   if (playBtn.classList.contains('stop')) {
@@ -40,4 +41,12 @@ music.addEventListener('timeupdate', (e) => {
   currTime.innerHTML = `${currMin}:${currSec}`;
   let progressWidth = (currentTime / audioDuration) * 100;
   progressBar.style.width = `${progressWidth}%`;
+
 });
+
+progressArea.addEventListener("click", (e)=>{
+    let progressWidth = progressArea.clientWidth; //timeline width
+    let clickedOffsetX = e.offsetX; //Coordinate of the width
+    let songDuration = music.duration; //Music total time
+    music.currentTime = (clickedOffsetX / progressWidth) * songDuration; //Updating Current Time
+})
